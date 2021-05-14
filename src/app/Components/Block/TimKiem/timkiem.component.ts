@@ -1,6 +1,7 @@
 import {Component,OnInit } from "@angular/core";
 
 import {LoaibdsService} from '../../../Services/loaibds.module';
+import {KhuvucService} from '../../../Services/khuvuc.module';
 
 import {FormGroup,FormControl} from '@angular/forms';
 
@@ -9,17 +10,18 @@ import {FormGroup,FormControl} from '@angular/forms';
 @Component({
     templateUrl: 'timkiem.component.html',
     selector: 'timkiem',
-    providers: [LoaibdsService]
+    providers: [LoaibdsService,KhuvucService]
     
 })
 
 export class TimkiemComponent implements OnInit{
   loaibsd: any;
-
+  khuvuc: any;
   public formSeach: FormGroup;
 
   constructor(
-    private loadbdsService: LoaibdsService
+    private loadbdsService: LoaibdsService,
+    private khuvucSevrice:KhuvucService
   ){
      
       this.formSeach=new FormGroup({
@@ -30,6 +32,7 @@ export class TimkiemComponent implements OnInit{
   }
   ngOnInit(): void {
     this.retrieveLoadbds();
+    this.retrieveKhuvuc();
   } 
 
   retrieveLoadbds(): void {
@@ -43,6 +46,15 @@ export class TimkiemComponent implements OnInit{
           console.log(error);
         });
 }
-
+retrieveKhuvuc(): void{
+  this.khuvucSevrice.getAll()
+     .subscribe(data=>{
+         this.khuvuc=data;
+         console.log(data);
+     },
+      error=>{
+          console.log(error);
+      });
+}
   
 }
