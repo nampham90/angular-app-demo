@@ -29,8 +29,8 @@
             "styles": [
               "src/styles.css",
               "src/bootstrap.min.css",
-              "src/w3.css",
-              "src/theme.min.css"
+              "src/w3.css"
+              
             ],
             "scripts": []
           },
