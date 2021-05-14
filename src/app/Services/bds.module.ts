@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
 import {HttpClient,HttpHeaders} from "@angular/common/http";
 
-const baseUrl = 'http://192.168.1.26:3000/api/bds';
+const baseUrl = 'https://192.168.1.26:3443/api/bds';
 
 @Injectable({
     providedIn: 'root'
@@ -27,6 +27,6 @@ export class BdscService{
     findtimkiem(data: any): Observable<any>{
         const httpHeaders=new HttpHeaders();
         httpHeaders.append('content-type','application/json');
-        return this.http.post('http://192.168.1.26:3000/api/bds/timkiem',data,{headers:httpHeaders});
+        return this.http.post('https://192.168.1.26:3443/api/bds/timkiem',data,{headers:httpHeaders});
     }
 }

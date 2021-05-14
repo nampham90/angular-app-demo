@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
 import {HttpClient,HttpHeaders} from "@angular/common/http";
 
-const baseUrl = 'http://192.168.1.26:3000/api/loaibds/';
+const baseUrl = 'https://192.168.1.26:3443/api/loaibds/';
 
 @Injectable()
 
