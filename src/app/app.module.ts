@@ -9,6 +9,7 @@ import { MenuComponent } from './Components/Block/Menu/menu.component';
 import { SliderComponent } from './Components/Block/Slider/slider.component';
 import {TimkiemComponent} from './Components/Block/TimKiem/timkiem.component';
 import {KhuVucComponent}  from './Components/Block/KhuVuc/khuvuc.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {KhuVucComponent}  from './Components/Block/KhuVuc/khuvuc.component';
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
