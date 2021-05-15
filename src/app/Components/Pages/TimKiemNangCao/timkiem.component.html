@@ -9,7 +9,7 @@
       </ol>
     </nav>
     <!-- Post-->
-    <article *ngFor="let listbds of bdskhuvuc | paginate: { itemsPerPage: 5, currentPage: page,totalItems:totalLength }" class="card card-horizontal card-hover mb-grid-gutter"><a class="card-img-top" href="blog-single-ls.html" style="background-image: url(../../../../assets/01.jpg);"></a>
+    <article *ngFor="let listbds of bdstimkiem | paginate: { itemsPerPage: 10, currentPage: page,totalItems:totalLength }" class="card card-horizontal card-hover mb-grid-gutter"><a class="card-img-top" href="blog-single-ls.html" style="background-image: url(../../../../assets/01.jpg);"></a>
       <div class="card-body"><a class="meta-link fs-sm mb-2" routerLink="/bds/chitietbds/{{listbds.id}}">{{listbds.khuvuc}}</a>
         <h2 class="h4 nav-heading mb-4"><a routerLink="/bds/chitietbds/{{listbds.id}}">{{listbds.tenbds}}</a></h2><a class="d-flex meta-link fs-sm align-items-center pt-3" href="#"><img class="rounded-circle" src="../../../../assets/01.jpg" alt="Emma Brown" width="36">
           <div class="ps-2 ms-1 mt-n1">Loại:<span class="fw-semibold ms-1">{{listbds.phanloai}}</span></div></a>

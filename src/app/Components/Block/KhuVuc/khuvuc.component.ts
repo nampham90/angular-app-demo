@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-
+import { ActivatedRoute ,Router} from '@angular/router';
 import {KhuvucService} from '../../../Services/khuvuc.module';
 
 
@@ -12,8 +12,13 @@ import {KhuvucService} from '../../../Services/khuvuc.module';
 
 export class KhuVucComponent implements OnInit{
     khuvuc :any;
+    currentbds:any;
+    bdsdata:any;
+    currentIndex = -1;
     constructor(
-        private khuvucSevrice:KhuvucService
+        private khuvucSevrice:KhuvucService,
+        private route: ActivatedRoute,
+        private router: Router
     ){}
 
     ngOnInit(): void {
@@ -29,4 +34,18 @@ export class KhuVucComponent implements OnInit{
                 console.log(error);
             });
     }
+    setActiveTutorial(khuvucbds:any, index:any): void {
+        this.currentbds = khuvucbds;
+        this.currentIndex = index;
+        console.log(this.currentbds.tenkhuvuc+":"+this.currentIndex);
+
+
+    }
+
+    refreshList(): void {
+        this.retrieveKhuvuc();
+        this.currentbds = null;
+        this.currentIndex = -1;
+    }
+
 }

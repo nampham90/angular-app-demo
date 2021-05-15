@@ -11,10 +11,10 @@
     </div>
 
         <!--login form-->
-        <form>
+        <form (ngSubmit)="onSubmit()" [formGroup]="formSeach">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">BDS Bán & BDS Thuê</label>
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" >
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" formControlName="phanloai">
 
               <option value="BDS Thuê">BDS Thuê</option>
               <option value="BDS Bán">BDS Bán</option>
@@ -23,7 +23,7 @@
         </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Danh Mục</label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="Default select example" formControlName="loaibds">
 
               <option  *ngFor="let tenloaibds of loaibsd" value="{{tenloaibds.tenloaibds}}">{{tenloaibds.tenloaibds}}</option>
 
@@ -31,7 +31,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Khu Vực</label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="Default select example" formControlName="khuvuc">
 
               <option *ngFor="let tenkhuvuc of khuvuc" value="{{tenkhuvuc.tenkhuvuc}}">{{ tenkhuvuc.tenkhuvuc }}</option>
             </select>

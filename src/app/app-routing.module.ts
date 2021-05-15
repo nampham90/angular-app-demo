@@ -12,8 +12,8 @@ import { DetailComponent } from './Components/Pages/Detail/detail.component';
 import { HomeComponent } from './Components/Pages/Home/home.component';
 //import { KhuVucTimKiemComponent} from './Components/Pages/KhuVucTimKiem/khuvuctimkiem.component';
 
-//import { TimkiemNangCaoComponent } from './Components/Pages/TimKiemNangCao/timkiem.component';
-//import { AddbdsComponent} from './Components/Pages/Addbds/Addbds.component';
+import { TimkiemNangCaoComponent } from './Components/Pages/TimKiemNangCao/timkiem.component';
+import { AddbdsComponent} from './Components/Pages/Addbds/Addbds.component';
 
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
@@ -22,11 +22,11 @@ import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 const routesConfig:Routes=[
-  //  {path:'khuvuc/:khuvuc',component:CateComponent },
+    {path:'khuvuc/:khuvuc',component:CateComponent },
     {path:'bds/chitietbds/:id',component:DetailComponent},
    // {path:'khuvuctimkiem/:khuvuc',component:KhuVucTimKiemComponent},
-    //{path:'timkiemnangcao',component: TimkiemNangCaoComponent},
-    //{path:'addbds', component:AddbdsComponent},
+    {path:'timkiemnangcao',component: TimkiemNangCaoComponent},
+    {path:'addbds', component:AddbdsComponent},
     {path: 'detail',component:DetailComponent},
     {path: 'cate',component:CateComponent},
     {path:'**',component:HomeComponent}
@@ -36,8 +36,9 @@ const routesConfig:Routes=[
 
 @NgModule({
     declarations:[
-      HomeComponent,DetailComponent,CateComponent
-     //KhuVucTimKiemComponent,TimkiemNangCaoComponent,
+      HomeComponent,DetailComponent,CateComponent,
+      TimkiemNangCaoComponent
+     //KhuVucTimKiemComponent,,
      // AddbdsComponent
       
     ],
