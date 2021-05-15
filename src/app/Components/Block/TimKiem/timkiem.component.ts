@@ -2,15 +2,18 @@ import {Component,OnInit } from "@angular/core";
 
 import {LoaibdsService} from '../../../Services/loaibds.module';
 import {KhuvucService} from '../../../Services/khuvuc.module';
+import {BdscService} from '../../../Services/bds.module';
+
 
 import {FormGroup,FormControl} from '@angular/forms';
 
+import {Router,ActivatedRoute,ParamMap} from "@angular/router";
 
 
 @Component({
     templateUrl: 'timkiem.component.html',
     selector: 'timkiem',
-    providers: [LoaibdsService,KhuvucService]
+    providers: [LoaibdsService,KhuvucService,BdscService]
     
 })
 
@@ -21,7 +24,10 @@ export class TimkiemComponent implements OnInit{
 
   constructor(
     private loadbdsService: LoaibdsService,
-    private khuvucSevrice:KhuvucService
+    private khuvucSevrice:KhuvucService,
+    private router: Router,
+    private route : ActivatedRoute,
+    private bdsSevvice: BdscService
   ){
      
       this.formSeach=new FormGroup({
@@ -45,16 +51,34 @@ export class TimkiemComponent implements OnInit{
         error => {
           console.log(error);
         });
-}
-retrieveKhuvuc(): void{
-  this.khuvucSevrice.getAll()
-     .subscribe(data=>{
-         this.khuvuc=data;
-         console.log(data);
-     },
-      error=>{
-          console.log(error);
-      });
-}
+  }
+  retrieveKhuvuc(): void{
+    this.khuvucSevrice.getAll()
+      .subscribe(data=>{
+          this.khuvuc=data;
+          console.log(data);
+      },
+        error=>{
+            console.log(error);
+        });
+  }
+  onSubmit(){
+    console.log(this.formSeach.value.phanloai);
+    const data={
+       phanloai: this.formSeach.value.phanloai,
+       loaibds : this.formSeach.value.loaibds,
+       khuvuc: this.formSeach.value.khuvuc
+    }
+    console.log(data);
+    this.router.navigate(['/timkiemnangcao',{phanloai:this.formSeach.value.phanloai,loaibds:this.formSeach.value.loaibds,khuvuc:this.formSeach.value.khuvuc}]);
+   /* this.bdsSevvice.findtimkiem(data)
+        .subscribe(dulieu=>{
+            console.log(dulieu);
+
+        },
+          err=>{
+            console.log(err);
+          });*/
+ }  
   
 }
