@@ -1,4 +1,5 @@
 import {NgModule} from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
 import {Routes, RouterModule} from "@angular/router";
 import {CommonModule} from "@angular/common";
 import { NgxPaginationModule } from 'ngx-pagination';
@@ -37,9 +38,9 @@ const routesConfig:Routes=[
 @NgModule({
     declarations:[
       HomeComponent,DetailComponent,CateComponent,
-      TimkiemNangCaoComponent
+      TimkiemNangCaoComponent,AddbdsComponent
      //KhuVucTimKiemComponent,,
-     // AddbdsComponent
+     // 
       
     ],
     imports:[
@@ -52,7 +53,8 @@ const routesConfig:Routes=[
         MatSliderModule,
         FormsModule,
         ReactiveFormsModule,
-        NgbPaginationModule, NgbAlertModule
+        NgbPaginationModule, NgbAlertModule,
+        BrowserModule
 
     ],
     entryComponents: [HomeComponent],

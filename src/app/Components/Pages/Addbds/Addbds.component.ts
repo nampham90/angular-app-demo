@@ -42,7 +42,7 @@ export class AddbdsComponent implements OnInit{
         private route: ActivatedRoute
     ){
         this.formCreateBDS=fb.group({
-            phanloai: 'BDS Thuê',
+            phanloai: ['BDS Bán',Validators.required],
             loaibds: ['',Validators.required],
             khuvuc: ['',Validators.required],
             tenbds: ['',Validators.required],
@@ -86,13 +86,13 @@ export class AddbdsComponent implements OnInit{
         }
         if(this.nameImage.length>0){
            this.bdsService.create(bds)
-            .subscribe(data=>{
-                console.log(data);
-                this.submitted = true;
+             .subscribe(data=>{
+                 console.log(data);
+                 this.submitted = true;
 
-            },err=>{
-                console.log(err);
-            })
+             },err=>{
+                 console.log(err);
+             })
             console.log(bds);
 
         }else{

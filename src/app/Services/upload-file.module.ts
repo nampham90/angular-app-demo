@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UploadFilesService {
 
-  private baseUrl = 'http://192.168.1.26:3000';
+  private baseUrl = 'http://192.168.1.26:3443';
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +20,7 @@ export class UploadFilesService {
       reportProgress: true,
       responseType: 'json'
     });
+    
 
     return this.http.request(req);
   }

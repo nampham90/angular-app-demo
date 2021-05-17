@@ -1,6 +1,6 @@
-<div>
+<div *ngIf="!submitted">
     <h1>Thêm Bất Động Sản</h1>
-  <form>
+  <form  [formGroup]='formCreateBDS'>
     <div class="mb-3">
         <select class="form-select" aria-label="Default select example"  formControlName="phanloai" required>
             <option value="BDS Bán">BDS Bán</option>
@@ -10,14 +10,133 @@
     <div class="mb-3">
         <label for="gia" class="form-label">Chọn Danh Mục BDS</label>
         <select class="form-select" aria-label="Default select example"  formControlName="loaibds" required>
-            <option value="BDS Bán">BDS Bán</option>
+            <option *ngFor="let lbds of loaibds;let i=index" value="{{lbds.tenloaibds}}">{{lbds.tenloaibds}}</option>
 
         </select>
-        <b>Vui long chọn danh mục</b>
+        <b *ngIf="formCreateBDS.controls.loaibds.invalid && formCreateBDS.controls.loaibds.touched" [ngStyle]="{'color':'red'}">Vui long chọn danh mục</b>
+    </div>
+    <div class="mb-3">
+        <label for="gia" class="form-label">Chọn Khu Vực</label>
+        <select class="form-select" aria-label="Default select example"  formControlName="khuvuc" required>
+            <option *ngFor='let tkhuvuc of khuvuc' value="{{tkhuvuc.tenkhuvuc}}">{{tkhuvuc.tenkhuvuc}}</option>
+        </select>
+        <b *ngIf="formCreateBDS.controls.khuvuc.invalid && formCreateBDS.controls.khuvuc.touched" [ngStyle]="{'color':'red'}">Vui long chọn khu vực</b>
+    </div>
+    <div >
+        <label for="gia" class="form-label">Tên BDS</label>
+        <input type="text" class="form-control" formControlName="tenbds" required>
+        <div class="form-text">Tên BDS ngắn gọn và là từ khóa tìm kiếm trên google.</div>
+        <b *ngIf="formCreateBDS.controls.tenbds.invalid && formCreateBDS.controls.tenbds.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập tên BDS</b>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Vị Thế BDS</label>
+        <textarea class="form-control"  rows="3"  formControlName="vithebds" required></textarea>
+        <div id="emailHelp" class="form-text">Nêu lên thế mạnh bất động sản của bạn.</div>
+        <b *ngIf="formCreateBDS.controls.vithebds.invalid && formCreateBDS.controls.vithebds.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Mô Tả</label>
+        <textarea class="form-control"  rows="3"  formControlName="mota" required></textarea>
+        <div id="emailHelp" class="form-text">Giới Thiệu Về Bất Động Sản Của Bạn, không quá 500 từ</div>
+        <b *ngIf="formCreateBDS.controls.mota.invalid && formCreateBDS.controls.mota.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+    </div>
+    <div >
+      <label for="gia" class="form-label">Giá BDS</label>
+      <input type="text" class="form-control" id="giabds"  name="giabds" formControlName="giabds" required>
+      <b *ngIf="formCreateBDS.controls.giabds.invalid && formCreateBDS.controls.giabds.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+    </div>
+    <div class="mb-3">
+        <label for="gia" class="form-label">Công Năng</label>
+        <input type="text" class="form-control"  formControlName="congnang" required>
+        <b *ngIf="formCreateBDS.controls.congnang.invalid && formCreateBDS.controls.congnang.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+    
+    </div>
+    <div >
+        <label for="gia" class="form-label">Hướng</label>
+        <input type="text" class="form-control"  formControlName="huong" required>
+        <b *ngIf="formCreateBDS.controls.huong.invalid && formCreateBDS.controls.huong.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+    
+    </div>
+    <div class="mb-3">
+      <label for="dientich" class="form-label">Diện Tích</label>
+      <input type="text" class="form-control"  formControlName="dientich" required>
+      <b *ngIf="formCreateBDS.controls.dientich.invalid && formCreateBDS.controls.dientich.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+    </div>
+    <div class="mb-3">
+        <label for="gia" class="form-label">Hổ Trợ Vay Vốn</label>
+        <input type="text" class="form-control"  formControlName="hotrovayvon" required>
+        <b *ngIf="formCreateBDS.controls.hotrovayvon.invalid && formCreateBDS.controls.hotrovayvon.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+    
+    </div>
+    <div class="mb-3">
+      <label for="gia" class="form-label">Tên Người Bán</label>
+      <input type="text" class="form-control"  formControlName="lienhe" required>
+      <b *ngIf="formCreateBDS.controls.lienhe.invalid && formCreateBDS.controls.lienhe.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+  
+    </div>
+    <div class="mb-3">
+      <label for="gia" class="form-label">Số Điện Thoại</label>
+      <input type="text" class="form-control"  formControlName="sodienthoai" required>
+      <b *ngIf="formCreateBDS.controls.sodienthoai.invalid && formCreateBDS.controls.sodienthoai.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+    </div>
+    <div class="mb-3">
+      <label for="gia" class="form-label">Zalo</label>
+      <input type="text" class="form-control"  formControlName="zalo" required>
+      <b *ngIf="formCreateBDS.controls.zalo.invalid && formCreateBDS.controls.zalo.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+  
     </div>
 
+    <div class="row">
+        <div class="col-8">
+          <label class="btn btn-default p-0">
+            <input type="file" multiple (change)="selectFiles($event)" class="form-control"/>
+          </label>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+      
+        <div class="col-4">
+          <button
+            class="btn btn-success btn-sm"
+            [disabled]="!selectedFiles"
+            (click)="uploadFiles()"
+            
+          >
+            Upload
+          </button>
+        </div>
+      </div>
+      
+      <div *ngFor="let progressInfo of progressInfos" class="mb-2">
+        <span>{{ progressInfo.fileName }}</span>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-info progress-bar-striped"
+            role="progressbar"
+            attr.aria-valuenow="{{ progressInfo.value }}"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            [ngStyle]="{ width: progressInfo.value + '%' }"
+          >
+            {{ progressInfo.value }}%
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="message.length" class="alert alert-secondary my-3" role="alert">
+        <ul *ngFor="let msg of message; let i = index">
+          <li>{{ msg }}</li>
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <button  type="submit" [disabled]="formCreateBDS.invalid" class="btn btn-primary xichsangphai xichxuong">Submit</button>
+      </div>
+    
 
   </form>
 </div>
+
+<div *ngIf="submitted">
+    <h4>You submitted successfully!</h4>
+    <button class="btn btn-success" (click)="newBDS()">Add</button>
+  </div>
