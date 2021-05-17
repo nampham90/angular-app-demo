@@ -5,6 +5,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
 import { MenuComponent } from './Components/Block/Menu/menu.component';
 import { SliderComponent } from './Components/Block/Slider/slider.component';
 import {TimkiemComponent} from './Components/Block/TimKiem/timkiem.component';

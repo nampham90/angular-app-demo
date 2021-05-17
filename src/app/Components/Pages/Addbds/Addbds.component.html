@@ -1,6 +1,6 @@
 <div *ngIf="!submitted">
     <h1>Thêm Bất Động Sản</h1>
-  <form  [formGroup]='formCreateBDS'>
+  <form (ngSubmit)="onSubmit()" [formGroup]='formCreateBDS'>
     <div class="mb-3">
         <select class="form-select" aria-label="Default select example"  formControlName="phanloai" required>
             <option value="BDS Bán">BDS Bán</option>
@@ -69,7 +69,7 @@
     
     </div>
     <div class="mb-3">
-      <label for="gia" class="form-label">Tên Người Bán</label>
+      <label for="gia" class="form-label">Tên Người Bán Hoặc Cho Thuê</label>
       <input type="text" class="form-control"  formControlName="lienhe" required>
       <b *ngIf="formCreateBDS.controls.lienhe.invalid && formCreateBDS.controls.lienhe.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
   

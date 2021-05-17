@@ -19,9 +19,9 @@
         <div class="d-flex align-items-center justify-content-center justify-content-md-start">
           <div class="d-flex align-items-center me-grid-gutter">
             <div class="ps-2">
-              <h6 class="nav-heading mb-1"><a href="#" *ngIf="currentBds">Tư Vấn: {{currentBds.lienhe}}</a></h6>
+              <h6 class="nav-heading mb-1"><a class="edit" href="#" *ngIf="currentBds">Tư Vấn: {{currentBds.lienhe}}</a></h6>
               <div class="text-nowrap">
-                <div class="meta-link fs-xs"  *ngIf="currentBds"><i class="ai-calendar me-1 align-vertical"></i>SĐT:&nbsp;{{currentBds.sodienthoai}}</div><span class="meta-divider"></span> | <a class="meta-link fs-xs" *ngIf="currentBds" href="#comments" data-scroll><i class="ai-message-square me-1 align-vertical"></i>Zalo:&nbsp;{{currentBds.zalo}}</a>
+                <div class="meta-link fs-xs"  *ngIf="currentBds"><i class="me-1 align-vertical"><mat-icon>phone</mat-icon></i>&nbsp;{{currentBds.sodienthoai}}</div><span class="meta-divider"></span><a class="meta-link fs-xs" *ngIf="currentBds" href="#comments" data-scroll><i class="me-1 align-vertical"><mat-icon>message</mat-icon></i>&nbsp;{{currentBds.zalo}}</a>
               </div>
             </div>
           </div>
@@ -30,7 +30,7 @@
       <div class="d-none d-md-block position-absolute border-start h-100" style="top: 0; left: 50%; width: 1px;"></div>
       <div class="col-md-6 ps-md-3 py-3">
         <div class="d-flex align-items-center justify-content-center justify-content-md-end">
-          <h6 class="text-nowrap my-2 me-3">Share post:</h6><a class="btn-social bs-outline bs-facebook ms-2 my-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-outline bs-twitter ms-2 my-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-outline bs-google ms-2 my-2" href="#"><i class="ai-google"></i></a><a class="btn-social bs-outline bs-email ms-2 my-2" href="#"><i class="ai-mail"></i></a>
+          <h6 class="text-nowrap my-2 me-3">Share post:</h6><a class="btn-social bs-outline bs-facebook ms-2 my-2" href="#"><i><mat-icon>facebook</mat-icon></i></a><a class="btn-social bs-outline bs-twitter ms-2 my-2" href="#"><i><mat-icon>add_to_drive</mat-icon></i></a><a class="btn-social bs-outline bs-google ms-2 my-2" href="#"><i><mat-icon>g_translate</mat-icon></i></a><a class="btn-social bs-outline bs-email ms-2 my-2" href="#"><i><mat-icon>email</mat-icon></i></a>
         </div>
       </div>
     </div>
@@ -39,47 +39,39 @@
     <h2 class="h3 pt-2 pb-4">Hình Ảnh Trực Quan</h2>
 
     <!--slider-->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button *ngFor="let img of image; let i=index" [class.active]="i===0" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" ></button>
-  
-        </div>
-        <div class="carousel-inner">
-          <div *ngFor="let img of image; let i=index" [class.active]="i===0" class="carousel-item">
-            <img src="https://192.168.1.26:3443/public/uploads/{{img}}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>{{img}}</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-  
-  
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+    <div>
+     <ngb-carousel>
+       <ng-template ngbSlide *ngFor="let img of image; let i=index">
+         <div class="picsum-img-wrapper">
+           <img src="https://192.168.1.26:3443/public/uploads/{{img}}" class="editimg" alt="Random first slide">
+         </div>
+         <div class="carousel-caption">
+           <h3>{{img}}</h3>
+           <p>Bất Động Sản Thừa Thiên Huế.</p>
+         </div>
+       </ng-template>
+
+     </ngb-carousel>
+
+   </div>
+
+
+   <h2 class="xichxuong">Thông Tin Chi Tiết</h2>
+   <div class="bg-faded-primary rounded-3 p-4 mb-4">
+     <div class="p-md-3">
+       <blockquote class="blockquote mb-0">
+         <footer class="blockquote-footer" *ngIf="currentBds">Vị trí: {{currentBds.vithebds}}</footer>
+         <footer class="blockquote-footer" *ngIf="currentBds">Công Năng:  {{currentBds.congnang}}</footer>
+         <footer class="blockquote-footer" *ngIf="currentBds">Diện Tích:  {{currentBds.dientich}}</footer>
+         <footer class="blockquote-footer" *ngIf="currentBds">Hướng: {{currentBds.huong}}</footer>
+
+         <footer class="blockquote-footer" *ngIf="currentBds">Vay Vốn: {{currentBds.hotrovayvon}} </footer>
+
+       </blockquote>
+     </div>
+   </div>
     <!--slider-->
 
-    <h2 class="xichxuong">Thông Tin Chi Tiết</h2>
-    <div class="bg-faded-primary rounded-3 p-4 mb-4">
-      <div class="p-md-3">
-        <blockquote class="blockquote mb-0">
-          <footer class="blockquote-footer" *ngIf="currentBds">Vị trí: {{currentBds.vithebds}}</footer>
-          <footer class="blockquote-footer" *ngIf="currentBds">Công Năng:  {{currentBds.congnang}}</footer>
-          <footer class="blockquote-footer" *ngIf="currentBds">Diện Tích:  {{currentBds.dientich}}</footer>
-          <footer class="blockquote-footer" *ngIf="currentBds">Hướng: {{currentBds.huong}}</footer>
-
-          <footer class="blockquote-footer" *ngIf="currentBds">Vay Vốn: {{currentBds.hotrovayvon}} </footer>
-
-        </blockquote>
-      </div>
-    </div>
 
     <!-- Tags + Sharing-->
 

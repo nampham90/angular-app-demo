@@ -2,12 +2,14 @@
 import {Component,OnInit} from "@angular/core";
 
 import { BdscService } from '../../../Services/bds.module';
+import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 @Component({
     templateUrl: 'detail.component.html',
+    styleUrls: ['detail.component.css'],
     selector: 'detail',
-    providers:[BdscService]
+    providers:[BdscService,NgbCarouselConfig]
 })
 
 export class DetailComponent implements OnInit{
@@ -19,8 +21,14 @@ export class DetailComponent implements OnInit{
     constructor(
         private bdsidSevrice: BdscService,
         private route: ActivatedRoute,
-        private router: Router
-    ){}
+        private router: Router,
+        config: NgbCarouselConfig
+    ){
+        config.interval=2000;
+        config.wrap=true;
+        config.keyboard=false;
+        config.pauseOnHover=false;
+    }
     ngOnInit(): void {
        this.message="";
        this.getBdsID(this.route.snapshot.paramMap.get('id'));

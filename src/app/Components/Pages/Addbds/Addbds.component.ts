@@ -104,6 +104,9 @@ export class AddbdsComponent implements OnInit{
 
     newBDS(){
         this.submitted=false;
+        this.message = [];
+        this.progressInfos=[];
+        this.formCreateBDS.reset();
     }
 
     //xac dinh tep tai len

@@ -7,7 +7,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 //import {DemoMaterialModule} from './Components/Pages/Home/material-module';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
-
+import {MatIconModule} from '@angular/material/icon';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CateComponent } from './Components/Pages/Cate/cate.component';
 import { DetailComponent } from './Components/Pages/Detail/detail.component';
 import { HomeComponent } from './Components/Pages/Home/home.component';
@@ -54,7 +55,9 @@ const routesConfig:Routes=[
         FormsModule,
         ReactiveFormsModule,
         NgbPaginationModule, NgbAlertModule,
-        BrowserModule
+        BrowserModule,
+        MatIconModule,
+        NgbModule
 
     ],
     entryComponents: [HomeComponent],
