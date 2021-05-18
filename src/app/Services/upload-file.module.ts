@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UploadFilesService {
 
-  private baseUrl = 'https://192.168.1.26:3443';
+  private baseUrl = 'https://namphamtrade.com';
 
   constructor(private http: HttpClient) { }
 

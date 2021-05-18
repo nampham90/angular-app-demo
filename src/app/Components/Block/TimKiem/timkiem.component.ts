@@ -10,6 +10,7 @@ import {FormGroup,FormControl} from '@angular/forms';
 import {Router,ActivatedRoute,ParamMap} from "@angular/router";
 
 
+
 @Component({
     templateUrl: 'timkiem.component.html',
     selector: 'timkiem',
@@ -18,6 +19,13 @@ import {Router,ActivatedRoute,ParamMap} from "@angular/router";
 })
 
 export class TimkiemComponent implements OnInit{
+  selectedItem: any;
+  teams:any[]=[
+    {name: 'Liverpool'},
+    {name: 'Manchester City'},
+    {name: 'Arsenal'}
+  ];
+
   loaibsd: any;
   khuvuc: any;
   public formSeach: FormGroup;
@@ -27,7 +35,8 @@ export class TimkiemComponent implements OnInit{
     private khuvucSevrice:KhuvucService,
     private router: Router,
     private route : ActivatedRoute,
-    private bdsSevvice: BdscService
+    private bdsSevvice: BdscService,
+
   ){
      
       this.formSeach=new FormGroup({
@@ -39,6 +48,8 @@ export class TimkiemComponent implements OnInit{
   ngOnInit(): void {
     this.retrieveLoadbds();
     this.retrieveKhuvuc();
+
+    
   } 
 
   retrieveLoadbds(): void {

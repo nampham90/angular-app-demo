@@ -18,7 +18,9 @@ import { TimkiemNangCaoComponent } from './Components/Pages/TimKiemNangCao/timki
 import { AddbdsComponent} from './Components/Pages/Addbds/Addbds.component';
 
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 

@@ -6,7 +6,19 @@
     <div class="card-body">
     <div class="mb-3">
 
+      <div class="mb3">
 
+        <mat-form-field>
+            <mat-label>Your Team</mat-label>
+            <mat-select [(ngModel)]="selectedItem">
+                <mat-option *ngFor="let team of teams" [value]="team.name">
+                    {{team.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <h2>Your select {{selectedItem}}</h2>
+
+    </div>
 
     </div>
 
@@ -21,7 +33,8 @@
       
             </select>
         </div>
-          <div class="mb-3">
+
+        <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Danh Mục</label>
             <select class="form-select" aria-label="Default select example" formControlName="loaibds">
 
@@ -35,6 +48,10 @@
 
               <option *ngFor="let tenkhuvuc of khuvuc" value="{{tenkhuvuc.tenkhuvuc}}">{{ tenkhuvuc.tenkhuvuc }}</option>
             </select>
+          </div>
+          <div class="mb-3">
+   
+           
           </div>
           <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
 

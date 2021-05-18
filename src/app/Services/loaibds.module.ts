@@ -3,7 +3,7 @@ import { Observable,throwError  } from 'rxjs';
 import {HttpClient,HttpHeaders} from "@angular/common/http";
 import { catchError, map } from 'rxjs/operators';
 
-const baseUrl = 'https://192.168.1.26:3443/api/loaibds';
+const baseUrl = 'https://namphamtrade.com/api/loaibds';
 
 @Injectable()
 

@@ -10,7 +10,7 @@ export class CategoryService{
         let options={
             headers: new HttpHeaders().set("Content-Type", "application/x-www-form-urlencoded")
         }
-        return this.http.post("http://192.168.1.26:3443/api/cate",options);
+        return this.http.post("https://namphamtrade.com/api/cate",options);
     }
 }
 

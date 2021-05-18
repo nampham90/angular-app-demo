@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from 'rxjs';
 import {HttpClient,HttpHeaders} from "@angular/common/http";
 
-const baseUrl = 'https://192.168.1.26:3443/api/khuvuc/';
+const baseUrl = 'https://namphamtrade.com/api/khuvuc/';
 
 @Injectable()
 
