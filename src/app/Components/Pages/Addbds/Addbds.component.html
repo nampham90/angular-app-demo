@@ -13,14 +13,14 @@
             <option *ngFor="let lbds of loaibds;let i=index" value="{{lbds.tenloaibds}}">{{lbds.tenloaibds}}</option>
 
         </select>
-        <b *ngIf="formCreateBDS.controls.loaibds.invalid && formCreateBDS.controls.loaibds.touched" [ngStyle]="{'color':'red'}">Vui long chọn danh mục</b>
+        <b *ngIf="formCreateBDS.controls.loaibds.invalid && formCreateBDS.controls.loaibds.touched" [ngStyle]="{'color':'red'}">Vui lòng chọn danh mục</b>
     </div>
     <div class="mb-3">
         <label for="gia" class="form-label">Chọn Khu Vực</label>
         <select class="form-select" aria-label="Default select example"  formControlName="khuvuc" required>
             <option *ngFor='let tkhuvuc of khuvuc' value="{{tkhuvuc.tenkhuvuc}}">{{tkhuvuc.tenkhuvuc}}</option>
         </select>
-        <b *ngIf="formCreateBDS.controls.khuvuc.invalid && formCreateBDS.controls.khuvuc.touched" [ngStyle]="{'color':'red'}">Vui long chọn khu vực</b>
+        <b *ngIf="formCreateBDS.controls.khuvuc.invalid && formCreateBDS.controls.khuvuc.touched" [ngStyle]="{'color':'red'}">Vui lòng chọn khu vực</b>
     </div>
     <div >
         <label for="gia" class="form-label">Tên BDS</label>
@@ -32,57 +32,57 @@
         <label for="exampleFormControlTextarea1" class="form-label">Vị Thế BDS</label>
         <textarea class="form-control"  rows="3"  formControlName="vithebds" required></textarea>
         <div id="emailHelp" class="form-text">Nêu lên thế mạnh bất động sản của bạn.</div>
-        <b *ngIf="formCreateBDS.controls.vithebds.invalid && formCreateBDS.controls.vithebds.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+        <b *ngIf="formCreateBDS.controls.vithebds.invalid && formCreateBDS.controls.vithebds.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập dữ liệu vào trường này</b>
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Mô Tả</label>
         <textarea class="form-control"  rows="3"  formControlName="mota" required></textarea>
         <div id="emailHelp" class="form-text">Giới Thiệu Về Bất Động Sản Của Bạn, không quá 500 từ</div>
-        <b *ngIf="formCreateBDS.controls.mota.invalid && formCreateBDS.controls.mota.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+        <b *ngIf="formCreateBDS.controls.mota.invalid && formCreateBDS.controls.mota.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập du liệu vào trường này</b>
     </div>
     <div >
       <label for="gia" class="form-label">Giá BDS</label>
       <input type="text" class="form-control" id="giabds"  name="giabds" formControlName="giabds" required>
-      <b *ngIf="formCreateBDS.controls.giabds.invalid && formCreateBDS.controls.giabds.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+      <b *ngIf="formCreateBDS.controls.giabds.invalid && formCreateBDS.controls.giabds.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập dữ liệu vào trường này</b>
     </div>
     <div class="mb-3">
         <label for="gia" class="form-label">Công Năng</label>
         <input type="text" class="form-control"  formControlName="congnang" required>
-        <b *ngIf="formCreateBDS.controls.congnang.invalid && formCreateBDS.controls.congnang.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+        <b *ngIf="formCreateBDS.controls.congnang.invalid && formCreateBDS.controls.congnang.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập dữ liệu vào trường này</b>
     
     </div>
     <div >
         <label for="gia" class="form-label">Hướng</label>
         <input type="text" class="form-control"  formControlName="huong" required>
-        <b *ngIf="formCreateBDS.controls.huong.invalid && formCreateBDS.controls.huong.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+        <b *ngIf="formCreateBDS.controls.huong.invalid && formCreateBDS.controls.huong.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập dữ liệu vào trường này</b>
     
     </div>
     <div class="mb-3">
       <label for="dientich" class="form-label">Diện Tích</label>
       <input type="text" class="form-control"  formControlName="dientich" required>
-      <b *ngIf="formCreateBDS.controls.dientich.invalid && formCreateBDS.controls.dientich.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+      <b *ngIf="formCreateBDS.controls.dientich.invalid && formCreateBDS.controls.dientich.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập dữ liệu vào trường này</b>
     </div>
     <div class="mb-3">
         <label for="gia" class="form-label">Hổ Trợ Vay Vốn</label>
         <input type="text" class="form-control"  formControlName="hotrovayvon" required>
-        <b *ngIf="formCreateBDS.controls.hotrovayvon.invalid && formCreateBDS.controls.hotrovayvon.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+        <b *ngIf="formCreateBDS.controls.hotrovayvon.invalid && formCreateBDS.controls.hotrovayvon.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập dữ liệu vào trường này</b>
     
     </div>
     <div class="mb-3">
       <label for="gia" class="form-label">Tên Người Bán Hoặc Cho Thuê</label>
       <input type="text" class="form-control"  formControlName="lienhe" required>
-      <b *ngIf="formCreateBDS.controls.lienhe.invalid && formCreateBDS.controls.lienhe.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+      <b *ngIf="formCreateBDS.controls.lienhe.invalid && formCreateBDS.controls.lienhe.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập dữ liệu vào trường này</b>
   
     </div>
     <div class="mb-3">
       <label for="gia" class="form-label">Số Điện Thoại</label>
       <input type="text" class="form-control"  formControlName="sodienthoai" required>
-      <b *ngIf="formCreateBDS.controls.sodienthoai.invalid && formCreateBDS.controls.sodienthoai.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+      <b *ngIf="formCreateBDS.controls.sodienthoai.invalid && formCreateBDS.controls.sodienthoai.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập dữ liệu vào trường này</b>
     </div>
     <div class="mb-3">
       <label for="gia" class="form-label">Zalo</label>
       <input type="text" class="form-control"  formControlName="zalo" required>
-      <b *ngIf="formCreateBDS.controls.zalo.invalid && formCreateBDS.controls.zalo.touched" [ngStyle]="{'color':'red'}">Vui long nhập du liệu vào trường này</b>
+      <b *ngIf="formCreateBDS.controls.zalo.invalid && formCreateBDS.controls.zalo.touched" [ngStyle]="{'color':'red'}">Vui lòng nhập dữ liệu vào trường này</b>
   
     </div>
 

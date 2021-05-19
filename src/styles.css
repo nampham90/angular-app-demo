@@ -5,7 +5,6 @@ menu{padding-inline-start: 0px ! important;}
 .mb-2{margin-bottom:.5rem !important}
 .mb-sm-0{margin-bottom:0 !important}
 .pb-sm-5{padding-bottom:3rem !important}
-.content{position:relative;padding-left:2.5rem;background-color:#fff;z-index:2}
 .py-1{padding-top:.25rem !important;padding-bottom:.25rem !important}
 .py-2{padding-top:.5rem !important;padding-bottom:.5rem !important}
 .breadcrumb-item{font-weight:500}
@@ -35,7 +34,7 @@ menu{padding-inline-start: 0px ! important;}
 
 .rounded-circle{border-radius:50% !important}
 
-.content{position:relative;padding-left:2.5rem;background-color:#fff;z-index:2}
+
 .edit{text-decoration:none}
 
 .blockquote{margin-bottom:1rem;font-size:1rem}.blockquote>:last-child{margin-bottom:0}.blockquote-footer{margin-top:-1rem;margin-bottom:1rem;font-size:1rem;color:#4a4b65}.blockquote-footer::before{content:"\2014\00A0"}
@@ -79,4 +78,5 @@ menu{padding-inline-start: 0px ! important;}
 .bs-facebook:hover{background-color:#3b5998}.bs-facebook:hover.bs-light{color:#3b5998}.bs-twitter:hover{background-color:#1da1f2}.bs-twitter:hover.bs-light{color:#1da1f2}.bs-instagram:hover{background-color:#5851db}.bs-instagram:hover.bs-light{color:#5851db}.bs-google:hover{background-color:#ea4335}.bs-google:hover.bs-light{color:#ea4335}.bs-linkedin:hover{background-color:#0077b5}.bs-linkedin:hover.bs-light{color:#0077b5}.bs-pinterest:hover{background-color:#bd081c}.bs-pinterest:hover.bs-light{color:#bd081c}.bs-tumblr:hover{background-color:#35465c}.bs-tumblr:hover.bs-light{color:#35465c}.bs-behance:hover{background-color:#1769ff}.bs-behance:hover.bs-light{color:#1769ff}.bs-dribbble:hover{background-color:#ea4c89}.bs-dribbble:hover.bs-light{color:#ea4c89}.bs-vk:hover{background-color:#45668e}.bs-vk:hover.bs-light{color:#45668e}.bs-odnoklassniki:hover{background-color:#ed812b}.bs-odnoklassniki:hover.bs-light{color:#ed812b}.bs-skype:hover{background-color:#00aff0}.bs-skype:hover.bs-light{color:#00aff0}.bs-hangouts:hover{background-color:#0f9d58}.bs-hangouts:hover.bs-light{color:#0f9d58}.bs-messenger:hover{background-color:#0084ff}.bs-messenger:hover.bs-light{color:#0084ff}.bs-viber:hover{background-color:#59267c}.bs-viber:hover.bs-light{color:#59267c}.bs-telegram:hover{background-color:#0088cc}.bs-telegram:hover.bs-light{color:#0088cc}.bs-youtube:hover{background-color:#ff0000}.bs-youtube:hover.bs-light{color:#ff0000}.bs-figma:hover{background-color:#a259ff}.bs-figma:hover.bs-light{color:#a259ff}.bs-vimeo:hover{background-color:#1ab7ea}.bs-vimeo:hover.bs-light{color:#1ab7ea}.bs-wechat:hover{background-color:#7bb32e}.bs-wechat:hover.bs-light{color:#7bb32e}
 .bs-email:hover{background-color:#766df4}.bs-email:hover.bs-light{color:#766df4}
 .ms-2{margin-left:.5rem !important}
+
 
