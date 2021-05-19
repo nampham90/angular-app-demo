@@ -29,7 +29,7 @@
     right: 10%;
     bottom: -30%;
     width: 300px;
-    height: 540px;
+    height: 700px;
     background-color: #333;
     border-radius: 21px;
     transform: rotate(30deg);
@@ -91,4 +91,3 @@
      z-index: 99;
 
   }
-  

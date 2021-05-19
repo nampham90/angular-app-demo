@@ -1,5 +1,5 @@
 
- <div class="col-lg-9 content py-4 mb-2 mb-sm-0 pb-sm-5">
+ <div class="col-lg-12 content py-4 mb-2 mb-sm-0 pb-sm-5">
     <nav aria-label="breadcrumb">
       <ol class="py-1 my-2 breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -11,9 +11,9 @@
     <!-- Post-->
     <article *ngFor="let listbds of bdskhuvuc | paginate: { itemsPerPage: 5, currentPage: page,totalItems:totalLength }" class="card card-horizontal card-hover mb-grid-gutter"><a class="card-img-top" href="blog-single-ls.html" style="background-image: url(../../../../assets/01.jpg);"></a>
       <div class="card-body"><a class="meta-link fs-sm mb-2" routerLink="/bds/chitietbds/{{listbds.id}}">{{listbds.khuvuc}}</a>
-        <h5 class="h4 nav-heading mb-4"><a class="edit" routerLink="/bds/chitietbds/{{listbds.id}}">{{listbds.tenbds}}</a></h5><a class="d-flex meta-link fs-sm align-items-center pt-3" href="#"><img class="rounded-circle" src="../../../../assets/01.jpg" alt="Emma Brown" width="36">
+        <h5 class="h4 nav-heading mb-4"><a class="edit" routerLink="/bds/chitietbds/{{listbds.id}}">{{listbds.tenbds}}</a></h5><a class="d-flex meta-link fs-sm align-items-center pt-3" href="#"><img class="rounded-circle" src="../../../../assets/logo.png" alt="Emma Brown" width="36">
           <div class="ps-2 ms-1 mt-n1">Loại:<span class="fw-semibold ms-1">{{listbds.phanloai}}</span></div></a>
-        <div class="mt-3 text-end text-nowrap"><span class="meta-divider"></span><a class="meta-link fs-xs" href="#"><i class="ai-calendar me-1 mt-n1"></i>&nbsp;Giá:&nbsp;{{listbds.giabds}}</a></div>
+        <div class="mt-3 text-end text-nowrap"><span class="meta-divider"></span><a class="meta-link fs-xs" href="#"><i class="me-1 mt-n1"><mat-icon>paid</mat-icon></i>&nbsp;{{listbds.giabds}}</a></div>
       </div>
     </article>
     <!-- Post-->
