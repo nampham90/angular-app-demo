@@ -9,7 +9,9 @@
           [class.active]="i == currentIndex"
           (click)="setActiveTutorial(tenkhuvuc, i)"
           
-           class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" role="tab" aria-controls="list-home" routerLink="/khuvuc/{{tenkhuvuc.tenkhuvuc}}">{{tenkhuvuc.tenkhuvuc}}</a>
+           class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" role="tab" aria-controls="list-home" routerLink="/khuvuc/{{tenkhuvuc.tenkhuvuc}}">{{tenkhuvuc.tenkhuvuc}}
+           <span class="badge bg-primary rounded-pill"></span>
+        </a>
 
    </div>
 

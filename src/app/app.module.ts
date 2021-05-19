@@ -13,8 +13,15 @@ import { MenuComponent } from './Components/Block/Menu/menu.component';
 import { SliderComponent } from './Components/Block/Slider/slider.component';
 import {TimkiemComponent} from './Components/Block/TimKiem/timkiem.component';
 import {KhuVucComponent}  from './Components/Block/KhuVuc/khuvuc.component';
+import {AccountComponent} from './Components/Block/Account/account.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// For MDB Angular Pro
+import { NavbarModule, WavesModule, DropdownModule } from 'ng-uikit-pro-standard';
+// For MDB Angular Free
+
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuComponent,
     SliderComponent,
     TimkiemComponent,
-    KhuVucComponent
+    KhuVucComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,
@@ -30,7 +38,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule,
     MatSelectModule,
     MatFormFieldModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NavbarModule,
+    WavesModule,
+    DropdownModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
