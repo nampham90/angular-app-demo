@@ -1,0 +1,21 @@
+.col{
+    margin-bottom: 20px !important;
+  
+}
+.card-title{
+    font-weight: bold !important;
+    color:cornflowerblue !important;
+    
+}
+.card{
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+.card:hover{
+    width: 300px !important;
+    height: 400px !important;
+    
+}
+.card-text{
+    font-family: "Times New Roman", Times, serif;
+}
+

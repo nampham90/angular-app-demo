@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CateComponent } from './Components/Pages/Cate/cate.component';
 import { DetailComponent } from './Components/Pages/Detail/detail.component';
 import { HomeComponent } from './Components/Pages/Home/home.component';
+import { TinTucComponent} from './Components/Pages/TinTuc/tintuc.component';
 //import { KhuVucTimKiemComponent} from './Components/Pages/KhuVucTimKiem/khuvuctimkiem.component';
 
 import { TimkiemNangCaoComponent } from './Components/Pages/TimKiemNangCao/timkiem.component';
@@ -31,7 +32,7 @@ const routesConfig:Routes=[
    // {path:'khuvuctimkiem/:khuvuc',component:KhuVucTimKiemComponent},
     {path:'timkiemnangcao',component: TimkiemNangCaoComponent},
     {path:'addbds', component:AddbdsComponent},
-    {path: 'detail',component:DetailComponent},
+    {path: 'tintuc',component:TinTucComponent},
     {path: 'cate',component:CateComponent},
     {path:'**',component:HomeComponent}
 
@@ -41,7 +42,7 @@ const routesConfig:Routes=[
 @NgModule({
     declarations:[
       HomeComponent,DetailComponent,CateComponent,
-      TimkiemNangCaoComponent,AddbdsComponent
+      TimkiemNangCaoComponent,AddbdsComponent,TinTucComponent
      //KhuVucTimKiemComponent,,
      // 
       
