@@ -79,4 +79,8 @@ menu{padding-inline-start: 0px ! important;}
 .bs-email:hover{background-color:#766df4}.bs-email:hover.bs-light{color:#766df4}
 .ms-2{margin-left:.5rem !important}
 
+body {
+    background-color:azure !important;
+  }
+
 

@@ -35,7 +35,7 @@
       </div>
     </div>
     <!-- Post content-->
-    <p class="py-3" *ngIf="currentBds"> {{currentBds.mota}}</p>
+    <p class="py-3" *ngIf="currentBds">Mô tả: {{currentBds.mota}}</p>
     <h2 class="h3 pt-2 pb-4 kv-h2">Hình Ảnh Trực Quan</h2>
 
     <!--slider-->
@@ -60,14 +60,21 @@
    <div class="bg-faded-primary rounded-3 p-4 mb-4">
      <div class="p-md-3">
        <blockquote class="blockquote mb-0">
-         <footer class="blockquote-footer" *ngIf="currentBds">Vị trí: {{currentBds.vithebds}}</footer>
-         <footer class="blockquote-footer" *ngIf="currentBds">Công Năng:  {{currentBds.congnang}}</footer>
-         <footer class="blockquote-footer" *ngIf="currentBds">Diện Tích:  {{currentBds.dientich}}</footer>
-         <footer class="blockquote-footer" *ngIf="currentBds">Hướng: {{currentBds.huong}}</footer>
 
-         <footer class="blockquote-footer" *ngIf="currentBds">Vay Vốn: {{currentBds.hotrovayvon}} </footer>
-         <footer class="blockquote-footer" *ngIf="currentBds">Giá Sale: {{currentBds.giabds}} </footer>
-
+         <ul class="chitiet">
+          <li><i class="edit">Vị Trí : </i><p class="editp" *ngIf="currentBds">{{currentBds.vithebds}}</p>
+          </li>
+          <li><i class="edit">Công Năng : </i><p class="editp" *ngIf="currentBds">{{currentBds.congnang}}</p>
+          </li>
+          <li><i class="edit">Diện Tích : </i><p class="editp" *ngIf="currentBds">{{currentBds.dientich}}</p>
+          </li>
+          <li><i class="edit">Hướng : </i><p class="editp" *ngIf="currentBds">{{currentBds.huong}}</p>
+          </li>
+          <li><i class="edit">Vay Vốn : </i><p class="editp" *ngIf="currentBds">{{currentBds.hotrovayvon}}</p>
+          </li>
+          <li><i class="edit">Giá Sale : </i><p class="editp" *ngIf="currentBds">{{currentBds.giabds}}</p>
+          </li>
+        </ul>
        </blockquote>
      </div>
    </div>
