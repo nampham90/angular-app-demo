@@ -1,0 +1,24 @@
+
+<div *ngIf="!submitted" class="container xichxuong">
+    <div ><h1>Đăng Nhập</h1></div>
+    <div *ngIf='message' [ngStyle]="{'margin-top':'20px','margin-bottom':'20x','width':'100%','background-color':'Bisque'}">
+        <p [ngStyle]="{'margin': '10px auto'}">{{message}}</p>
+    </div>
+    <div class="row">
+        <form (ngSubmit)="onSubmit()" [formGroup]="formCreateDangNhap">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">User Name</label>
+              <input type="text" class="form-control" formControlName="username">
+              <p *ngIf='formCreateDangNhap.controls.username.invalid && formCreateDangNhap.controls.username.touched' [ngStyle]="{'color': 'red'}">UserName invaild</p>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password">
+              <p *ngIf='formCreateDangNhap.controls.password.invalid && formCreateDangNhap.controls.password.touched' [ngStyle]="{'color': 'red'}">Password invaild</p>
+            </div>
+
+            <button type="submit" [disabled]="formCreateDangNhap.invalid" class="btn btn-primary">Submit</button>
+
+          </form>
+    </div>
+</div>

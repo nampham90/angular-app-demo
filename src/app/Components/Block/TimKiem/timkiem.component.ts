@@ -13,6 +13,7 @@ import {Router,ActivatedRoute,ParamMap} from "@angular/router";
 
 @Component({
     templateUrl: 'timkiem.component.html',
+    styleUrls:['timkiem.component.css'],
     selector: 'timkiem',
     providers: [LoaibdsService,KhuvucService,BdscService]
     

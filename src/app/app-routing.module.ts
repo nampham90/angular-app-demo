@@ -13,6 +13,8 @@ import { CateComponent } from './Components/Pages/Cate/cate.component';
 import { DetailComponent } from './Components/Pages/Detail/detail.component';
 import { HomeComponent } from './Components/Pages/Home/home.component';
 import { TinTucComponent} from './Components/Pages/TinTuc/tintuc.component';
+import { DangKyComonent} from './Components/Pages/DangKy/dangky.component';
+import { DanhNhapComponent} from './Components/Pages/DangNhap/dangnhap.component';
 //import { KhuVucTimKiemComponent} from './Components/Pages/KhuVucTimKiem/khuvuctimkiem.component';
 
 import { TimkiemNangCaoComponent } from './Components/Pages/TimKiemNangCao/timkiem.component';
@@ -26,6 +28,8 @@ import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
+
+
 const routesConfig:Routes=[
     {path:'khuvuc/:khuvuc',component:CateComponent },
     {path:'bds/chitietbds/:id',component:DetailComponent},
@@ -34,6 +38,8 @@ const routesConfig:Routes=[
     {path:'addbds', component:AddbdsComponent},
     {path: 'tintuc',component:TinTucComponent},
     {path: 'cate',component:CateComponent},
+    {path: 'dangky',component:DangKyComonent},
+    {path: 'dangnhap',component:DanhNhapComponent},
     {path:'**',component:HomeComponent}
 
 
@@ -42,7 +48,8 @@ const routesConfig:Routes=[
 @NgModule({
     declarations:[
       HomeComponent,DetailComponent,CateComponent,
-      TimkiemNangCaoComponent,AddbdsComponent,TinTucComponent
+      TimkiemNangCaoComponent,AddbdsComponent,TinTucComponent,
+      DangKyComonent,DanhNhapComponent
      //KhuVucTimKiemComponent,,
      // 
       

@@ -20,6 +20,9 @@
     color: white;
 
 }
+.nav-link{
+    font-weight: bold !important;
+}
 .nav-link:hover{
     background-color: blueviolet;
     color: white !important;
@@ -30,3 +33,4 @@
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
+

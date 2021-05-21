@@ -14,6 +14,7 @@ import { SliderComponent } from './Components/Block/Slider/slider.component';
 import {TimkiemComponent} from './Components/Block/TimKiem/timkiem.component';
 import {KhuVucComponent}  from './Components/Block/KhuVuc/khuvuc.component';
 import {AccountComponent} from './Components/Block/Account/account.component';
+import {UserComponent} from './Components/Block/User/user.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // For MDB Angular Pro
@@ -30,7 +31,8 @@ import {MatIconModule} from '@angular/material/icon';
     SliderComponent,
     TimkiemComponent,
     KhuVucComponent,
-    AccountComponent
+    AccountComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,

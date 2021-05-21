@@ -1,0 +1,44 @@
+
+<div *ngIf="!submitted" class="container xichxuong">
+    <div ><h1>Đang Ký Tài Khoản</h1></div>
+    <div class="row">
+        <form class="row g-3" (ngSubmit)="onSubmit()" [formGroup]='formCreateDangKy'>
+            <div class="col-md-6">
+                <label for="username" class="form-label">UserName</label>
+                <input type="text" class="form-control" id="username" formControlName="username">
+                <b *ngIf='formCreateDangKy.controls.username.invalid && formCreateDangKy.controls.username.touched' [ngStyle]="{'color':'red'}">UserName invaild !</b>
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" formControlName="password">
+                <b *ngIf='formCreateDangKy.controls.password.invalid && formCreateDangKy.controls.password.touched' [ngStyle]="{'color':'red'}">Password invaild !</b>
+              </div>
+            <div class="col-12">
+              <label for="hoten" class="form-label">Họ Tên</label>
+              <input type="text" class="form-control" id="hoten" placeholder="Nhập Họ Tên Của Bạn !" formControlName="hoten">
+              <b *ngIf='formCreateDangKy.controls.hoten.invalid && formCreateDangKy.controls.hoten.touched' [ngStyle]="{'color':'red'}">Họ Tên invaild !</b>
+            </div>
+            <div class="col-12">
+                <label for="sdt" class="form-label">Số Điện Thoại</label>
+                <input type="text" class="form-control" id="sdt" placeholder="Nhập Số Điện Thoại Của Bạn !" formControlName="sdt">
+                <b *ngIf='formCreateDangKy.controls.sdt.invalid && formCreateDangKy.controls.sdt.touched' [ngStyle]="{'color':'red'}">Số Điện Thoại invaild !</b>
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+                <b *ngIf='formCreateDangKy.controls.email.invalid && formCreateDangKy.controls.email.touched' [ngStyle]="{'color':'red'}">Email invaild !</b>
+              </div>
+        
+        
+            <div class="col-12">
+              <button type="submit" [disabled]="formCreateDangKy.invalid" class="btn btn-primary">Sign in</button>
+            </div>
+          </form>
+
+    </div>
+</div>
+
+<div *ngIf="submitted">
+    <h4>You Register Successfully!</h4>
+    <button class="btn btn-success" (click)="newBDS()">Login Account</button>
+</div>
