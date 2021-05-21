@@ -19,5 +19,11 @@ export class UserComponent implements OnInit{
     logout():void{
        this.username=null;
        localStorage.removeItem('user');
+      
+       this.router.navigate(['/']);
+      
+    }
+    reloadPage() {
+        window.location.reload();
     }
 }

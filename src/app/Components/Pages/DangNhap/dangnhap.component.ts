@@ -3,6 +3,7 @@ import {Component,OnInit} from '@angular/core';
 import { AbstractControl,FormBuilder, FormGroup,FormControl,Validators,ValidatorFn} from '@angular/forms';
 import {UserService} from '../../../Services/user.module';
 import {Router,ActivatedRoute,ParamMap} from "@angular/router";
+
 @Component({
      templateUrl: 'dangnhap.component.html',
      styleUrls: ['dangnhap.component.css'],
@@ -54,6 +55,9 @@ export class DanhNhapComponent implements OnInit {
             console.error(error.message);
         })
         
+    }
+    reloadPage() {
+        window.location.reload();
     }
 
 }
