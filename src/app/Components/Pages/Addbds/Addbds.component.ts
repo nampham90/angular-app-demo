@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup,FormControl,Validators  } from '@angular/forms';
 import {Router,ActivatedRoute,ParamMap} from "@angular/router";
 @Component({
     templateUrl:'Addbds.component.html',
+    styleUrls:['Addbds.component.css'],
     selector: 'addbds',
     providers: [LoaibdsService,KhuvucService,UploadFilesService]
 })
