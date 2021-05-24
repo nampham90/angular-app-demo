@@ -1,8 +1,10 @@
-import {Component,OnInit} from '@angular/core';
+import {Component,EventEmitter,OnInit, Output} from '@angular/core';
 
 import { AbstractControl,FormBuilder, FormGroup,FormControl,Validators,ValidatorFn} from '@angular/forms';
 import {UserService} from '../../../Services/user.module';
 import {Router,ActivatedRoute,ParamMap} from "@angular/router";
+import {UsersService} from '../../../StoreService/user.service';
+import { TypeCheckScopeRegistry } from '@angular/compiler-cli/src/ngtsc/scope';
 
 @Component({
      templateUrl: 'dangnhap.component.html',
@@ -15,8 +17,10 @@ export class DanhNhapComponent implements OnInit {
     message:any;
     submitted =false;
     formCreateDangNhap: FormGroup;
+    @Output() newItemEvent = new EventEmitter<string>();
     constructor(
          private userService: UserService,
+         private usersService: UsersService,
          private router: Router,
          private fb: FormBuilder
 
@@ -46,7 +50,8 @@ export class DanhNhapComponent implements OnInit {
             }
            // sessionStorage.setItem('user',JSON.stringify(User));
            if(User.username){
-                localStorage.setItem('user',JSON.stringify(User));
+                this.usersService.addUser(User.username,User.password);
+                this.addNewItem(User.username);
                 this.router.navigate(['/']);
            }
 
@@ -56,8 +61,13 @@ export class DanhNhapComponent implements OnInit {
         })
         
     }
-    reloadPage() {
-        window.location.reload();
+
+   
+
+    addNewItem(value: string) {
+      this.newItemEvent.emit(value);
     }
+
+
 
 }

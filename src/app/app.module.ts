@@ -22,7 +22,9 @@ import { NavbarModule, WavesModule, DropdownModule } from 'ng-uikit-pro-standard
 // For MDB Angular Free
 
 import {MatIconModule} from '@angular/material/icon';
-
+import {UsersService} from '../app/StoreService/user.service';
+import { LoginComponent } from './Components/Block/User/login/login.component';
+import { LogoutComponent } from './Components/Block/User/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {MatIconModule} from '@angular/material/icon';
     TimkiemComponent,
     KhuVucComponent,
     AccountComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,
@@ -46,7 +50,7 @@ import {MatIconModule} from '@angular/material/icon';
     DropdownModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

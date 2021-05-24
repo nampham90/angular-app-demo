@@ -1,6 +1,8 @@
 import { analyzeAndValidateNgModules } from '@angular/compiler';
-import {Component,OnInit} from '@angular/core';
+import {Component,OnInit,Input} from '@angular/core';
 import {Router} from '@angular/router';
+import {UsersService} from '../../../StoreService/user.service';
+
 
 @Component({
     templateUrl: 'user.component.html',
@@ -9,21 +11,13 @@ import {Router} from '@angular/router';
 })
 
 export class UserComponent implements OnInit{
-    username:any;   
+    @Input() username='';
     constructor(
-        private router:Router
+        private router:Router,
+        private usersService : UsersService
     ){}
     ngOnInit():void{
-       this.username=JSON.parse(localStorage.getItem('user')!).username;
     }
-    logout():void{
-       this.username=null;
-       localStorage.removeItem('user');
-      
-       this.router.navigate(['/']);
-      
-    }
-    reloadPage() {
-        window.location.reload();
-    }
+
+
 }

@@ -1,21 +1,14 @@
 <div class="card xichxuong">
 
     <div class="card-header">
-        <h2 class="kv-h2"><i class="edit-icon"><mat-icon>account_circle</mat-icon></i> Tài Khoản</h2> 
-    </div>
-    <div class="card-body" *ngIf='username'>
-        <p class="user" >Welcom {{username}}</p>
-        <button type="submit" (click)="logout()" class="btn btn-primary">Logout</button>
-    </div>
+        <h2 class="kv-h2"><i class="edit-icon"><mat-icon>account_circle</mat-icon></i>Tài Khoản</h2> 
+        <div *ngIf='username'>
+            <app-login [username]='username'></app-login>
+        </div>
+        <div *ngIf='!username'>
+            <app-logout></app-logout>
+        </div>
 
-    <div class="card-body" *ngIf='!username'>
-        <div class="row">
-            <div class="col">
-                <button type="submit" class="btn btn-primary xichsangphai">Login</button>
-            </div>
-            <div class="col">
-                <button type="submit" class="btn btn-primary">Register</button>
-            </div>
     </div>
 
 </div>

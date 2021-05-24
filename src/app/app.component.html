@@ -6,7 +6,10 @@
 
 <div class="row xichxuong">
   <div class="col-lg-3">
-     <user></user>
+
+     <user [username]='username' (newItemEvent)='login($event)'></user>
+
+    
      <timkiem></timkiem>
      <khuvuc></khuvuc>
      <account></account>
