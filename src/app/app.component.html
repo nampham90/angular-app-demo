@@ -5,18 +5,37 @@
 <slider></slider>
 
 <div class="row xichxuong">
-  <div class="col-lg-3">
 
-     <user [username]='username' (newItemEvent)='login($event)'></user>
+  <div class="col-lg-12">
+   <div class="lienhedangtin">
+       <app-lienhedangtin></app-lienhedangtin>
+   </div>
+   <div class="themmau">
+      
+       <timkiem></timkiem>
+   </div>
+    
+
+     <!-- <user
+      [username]='username'
+      (newItemEvent)='login($event)'>
+    </user> -->
 
     
-     <timkiem></timkiem>
-     <khuvuc></khuvuc>
-     <account></account>
+
+     <!-- <khuvuc></khuvuc>
+     <account></account> -->
 
   </div>
   
-  <div class="col-lg-9">
+  <div class="col-lg-12">
       <router-outlet></router-outlet>
   </div>
+  <div class="col-lg-12 xichxuong">
+      <app-bdsban></app-bdsban>
+  </div>
+  <div class="col-lg-12 xichxuong" >
+      <app-bdsthue></app-bdsthue>
+  </div>
 </div>
+<app-footer></app-footer>

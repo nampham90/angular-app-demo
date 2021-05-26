@@ -27,6 +27,6 @@ export class BdscService{
     findtimkiem(data: any): Observable<any>{
         const httpHeaders=new HttpHeaders();
         httpHeaders.append('content-type','application/json');
-        return this.http.post('https://192.168.1.26:3443/api/bds/timkiem',data,{headers:httpHeaders});
+        return this.http.post('https://namphamtrade.com/api/bds/timkiem',data,{headers:httpHeaders});
     }
 }

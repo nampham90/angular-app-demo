@@ -1,53 +1,38 @@
-<div class="card xichxuong">
-
-    <div class="card-header">
-      <h2 class="kv-h2"><i class="edit-icon"><mat-icon>search</mat-icon></i> Tìm Kiếm Nâng Cao</h2> 
-    </div>
-    <div class="card-body">
-    <div class="mb-3">
-
-    <div class="mb3">
 
 
 
-    </div>
+<form (ngSubmit)="onSubmit()" [formGroup]="formSeach" class="editform">
+<div class="row">
+ 
+  <div class="col">
+    <select class="form-select" aria-label=".form-select-lg example" formControlName="phanloai">
 
-    </div>
+      <option value="Bán Đất Huế">Bán Đất Huế</option>
+      <option value="Bán Nhà Huế">Bán Nhà Huế</option>
+      <option value="Cho Thuê Đất Huế">Cho Thuê Đất Huế</option>
+      <option value="Cho Thuê Nhà Huế">Cho Thuê Nhà Huế</option>
 
-        <!--login form-->
-        <form (ngSubmit)="onSubmit()" [formGroup]="formSeach">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">BDS Bán & BDS Thuê</label>
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" formControlName="phanloai">
 
-              <option value="BDS Thuê">BDS Thuê</option>
-              <option value="BDS Bán">BDS Bán</option>
-      
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Danh Mục</label>
-            <select class="form-select" aria-label="Default select example" formControlName="loaibds">
-
-              <option  *ngFor="let tenloaibds of loaibsd" value="{{tenloaibds.tenloaibds}}">{{tenloaibds.tenloaibds}}</option>
-
-              </select>
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Khu Vực</label>
-            <select class="form-select" aria-label="Default select example" formControlName="khuvuc">
-
-              <option *ngFor="let tenkhuvuc of khuvuc" value="{{tenkhuvuc.tenkhuvuc}}">{{ tenkhuvuc.tenkhuvuc }}</option>
-            </select>
-          </div>
-          <div class="mb-3">
-   
-           
-          </div>
-          <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
-
-        </form>
-
-    </div>
+    </select>
   </div>
+  <div class="col">
+    <select class="form-select" aria-label="Default select example" formControlName="loaibds">
+
+      <option  *ngFor="let tenloaibds of loaibsd" value="{{tenloaibds.tenloaibds}}">{{tenloaibds.tenloaibds}}</option>
+
+    </select>
+  </div>
+  <div class="col">
+    <select class="form-select" aria-label="Default select example" formControlName="khuvuc">
+
+      <option *ngFor="let tenkhuvuc of khuvuc" value="{{tenkhuvuc.tenkhuvuc}}">{{ tenkhuvuc.tenkhuvuc }}</option>
+    </select>
+  </div>
+  <div class="col">
+    <button type="submit" class="btn btn-primary">Tìm Kiếm Nâng Cao</button>
+
+
+  </div>
+
+</div>
+</form>

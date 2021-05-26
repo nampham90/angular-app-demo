@@ -1,9 +1,11 @@
 import {Component,OnInit} from "@angular/core";
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     templateUrl: 'menu.component.html',
     selector:'menu',
-    styleUrls:["menu.component.css"]
+    styleUrls:["menu.component.css"],
+    providers: [NgbPaginationModule,NgbAlertModule]
 
 })
 

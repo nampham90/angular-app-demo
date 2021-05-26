@@ -19,12 +19,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // For MDB Angular Pro
 import { NavbarModule, WavesModule, DropdownModule } from 'ng-uikit-pro-standard';
+
 // For MDB Angular Free
 
 import {MatIconModule} from '@angular/material/icon';
 import {UsersService} from '../app/StoreService/user.service';
 import { LoginComponent } from './Components/Block/User/login/login.component';
 import { LogoutComponent } from './Components/Block/User/logout/logout.component';
+import { FooterComponent } from './Components/Block/footer/footer.component';
+import { BDSBanComponent } from './Components/Block/bdsban/bdsban.component';
+import { BDSThueComponent } from './Components/Block/bdsthue/bdsthue.component';
+import { LienhedangtinComponent } from './Components/Block/lienhedangtin/lienhedangtin.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -36,7 +44,11 @@ import { LogoutComponent } from './Components/Block/User/logout/logout.component
     AccountComponent,
     UserComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    FooterComponent,
+    BDSBanComponent,
+    BDSThueComponent,
+    LienhedangtinComponent
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,

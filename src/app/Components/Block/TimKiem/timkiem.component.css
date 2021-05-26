@@ -4,3 +4,11 @@
     color:darkblue;
     font-size: 1.3em;
 }
+.editform{
+    width: 70%;
+    margin: 20px auto;
+}
+.btn{
+    padding-right: 10px;
+    padding-left: 10px;
+}

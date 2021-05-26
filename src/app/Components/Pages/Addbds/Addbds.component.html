@@ -2,9 +2,12 @@
     <h2 class="kv-h2">Thêm Bất Động Sản</h2>
   <form (ngSubmit)="onSubmit()" [formGroup]='formCreateBDS'>
     <div class="mb-3">
+      <label for="gia" class="form-label">Chọn Loại BDS</label>
         <select class="form-select" aria-label="Default select example"  formControlName="phanloai" required>
-            <option value="BDS Bán">BDS Bán</option>
-            <option value="BDS Thuê">BDS Thuê</option>
+          <option value="Bán Đất Huế">Bán Đất Huế</option>
+          <option value="Bán Nhà Huế">Bán Nhà Huế</option>
+          <option value="Cho Thuê Đất Huế">Cho Thuê Đất Huế</option>
+          <option value="Cho Thuê Nhà Huế">Cho Thuê Nhà Huế</option>
         </select>
     </div>
     <div class="mb-3">
