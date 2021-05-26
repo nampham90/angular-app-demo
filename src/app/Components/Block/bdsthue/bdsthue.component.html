@@ -6,7 +6,83 @@
     </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">.1..</div>
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">.2..</div>
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <article *ngFor="let dataphanloai3 of dataphanloai3 | paginate: { 
+                                            itemsPerPage: 3,
+                                            currentPage: page3,
+                                            totalItems : totalLength3
+                                        }" 
+                class="card card-horizontal card-hover mb-grid-gutter">
+                <div class="col">
+                   <div class="card h-100">
+                       <img src="https://namphamtrade.com/public/uploads/{{dataphanloai3.image[0]}}" class="card-img-top" alt="...">
+                       <div class="card-body">
+                           <h5 class="card-title"><a class="meta-link fs-sm mb-2" routerLink="/bds/chitietbds/{{dataphanloai3.id}}">{{dataphanloai3.khuvuc}}</a></h5>
+                           <h5 class="h5 nav-heading mb-4"><a class="edit" routerLink="/bds/chitietbds/{{dataphanloai3.id}}">{{dataphanloai3.tenbds}}</a></h5>
+                           <p class="meta-link fs-xs">{{dataphanloai3.mota}}</p>
+                       </div>
+                        <div class="card-footer">
+                            <a class="meta-link fs-xs" href="#"></a><span class="meta-divider"></span><a class="meta-link fs-xs" href="#"><i class="me-1 mt-n1"><mat-icon>paid</mat-icon></i>&nbsp;{{dataphanloai3.giabds}}</a>
+                        </div>
+                   </div>
+                </div>
+             </article>
+         </div>
+         <div class="d-md-flex justify-content-between align-items-center pt-3 pb-2">
+            <div class="d-flex justify-content-center align-items-center mb-4">
+            <label class="pe-1 me-2">Show</label>
+            <select class="form-select me-2" style="width: 5rem;">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+            <div class="fs-sm text-nowrap ps-1 mb-1">posts per page</div>
+            </div>
+            <pagination-controls (pageChange)="page3 = $event"></pagination-controls>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <article *ngFor="let dataphanloai4 of dataphanloai4 | paginate: { 
+                                            itemsPerPage: 3,
+                                            currentPage: page4,
+                                            totalItems : totalLength4
+                                        }" 
+                class="card card-horizontal card-hover mb-grid-gutter">
+                <div class="col">
+                   <div class="card h-100">
+                       <img src="https://namphamtrade.com/public/uploads/{{dataphanloai4.image[0]}}" class="card-img-top" alt="...">
+                       <div class="card-body">
+                           <h5 class="card-title"><a class="meta-link fs-sm mb-2" routerLink="/bds/chitietbds/{{dataphanloai4.id}}">{{dataphanloai4.khuvuc}}</a></h5>
+                           <h5 class="h5 nav-heading mb-4"><a class="edit" routerLink="/bds/chitietbds/{{dataphanloai4.id}}">{{dataphanloai4.tenbds}}</a></h5>
+                           <p class="meta-link fs-xs">{{dataphanloai4.mota}}</p>
+                       </div>
+                        <div class="card-footer">
+                            <a class="meta-link fs-xs" href="#"></a><span class="meta-divider"></span><a class="meta-link fs-xs" href="#"><i class="me-1 mt-n1"><mat-icon>paid</mat-icon></i>&nbsp;{{dataphanloai4.giabds}}</a>
+                        </div>
+                   </div>
+                </div>
+             </article>
+         </div>
+         <div class="d-md-flex justify-content-between align-items-center pt-3 pb-2">
+            <div class="d-flex justify-content-center align-items-center mb-4">
+            <label class="pe-1 me-2">Show</label>
+            <select class="form-select me-2" style="width: 5rem;">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+            <div class="fs-sm text-nowrap ps-1 mb-1">posts per page</div>
+            </div>
+            <pagination-controls (pageChange)="page4 = $event"></pagination-controls>
+        </div>
+    </div>
+
 
 </div>

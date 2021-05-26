@@ -24,6 +24,9 @@ export class BdscService{
     getKhuvuc(khuvuc: any): Observable<any>{
         return this.http.get(`${baseUrl}/khuvuc/${khuvuc}`);
     }
+    getPhanloai(phanloai:any) : Observable<any>{
+        return this.http.post('https://namphamtrade.com/api/bds/phanloai',phanloai);
+    }
     findtimkiem(data: any): Observable<any>{
         const httpHeaders=new HttpHeaders();
         httpHeaders.append('content-type','application/json');

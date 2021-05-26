@@ -31,6 +31,9 @@ import { BDSBanComponent } from './Components/Block/bdsban/bdsban.component';
 import { BDSThueComponent } from './Components/Block/bdsthue/bdsthue.component';
 import { LienhedangtinComponent } from './Components/Block/lienhedangtin/lienhedangtin.component';
 
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 
 
@@ -60,7 +63,10 @@ import { LienhedangtinComponent } from './Components/Block/lienhedangtin/lienhed
     NavbarModule,
     WavesModule,
     DropdownModule,
-    MatIconModule
+    MatIconModule,
+    NgbPaginationModule,
+    NgbAlertModule,
+    NgxPaginationModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
