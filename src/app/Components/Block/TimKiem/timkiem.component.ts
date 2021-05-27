@@ -41,9 +41,9 @@ export class TimkiemComponent implements OnInit{
   ){
      
       this.formSeach=new FormGroup({
-        phanloai: new FormControl('BDS Thuê'),
-        loaibds : new FormControl('Căn Hộ Cao Cấp'),
-        khuvuc : new FormControl('Thành Phố Huế')
+        phanloai: new FormControl('Bán Nhà Huế'),
+        loaibds : new FormControl('Căn hộ cao cấp'),
+        khuvuc : new FormControl('Thành phố Huế')
       });
   }
   ngOnInit(): void {

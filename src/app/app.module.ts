@@ -10,6 +10,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 import { MenuComponent } from './Components/Block/Menu/menu.component';
+import { BDSBanComponent } from './Components/Block/bdsban/bdsban.component';
+import { BDSThueComponent } from './Components/Block/bdsthue/bdsthue.component';
 import { SliderComponent } from './Components/Block/Slider/slider.component';
 import {TimkiemComponent} from './Components/Block/TimKiem/timkiem.component';
 import {KhuVucComponent}  from './Components/Block/KhuVuc/khuvuc.component';
@@ -27,8 +29,7 @@ import {UsersService} from '../app/StoreService/user.service';
 import { LoginComponent } from './Components/Block/User/login/login.component';
 import { LogoutComponent } from './Components/Block/User/logout/logout.component';
 import { FooterComponent } from './Components/Block/footer/footer.component';
-import { BDSBanComponent } from './Components/Block/bdsban/bdsban.component';
-import { BDSThueComponent } from './Components/Block/bdsthue/bdsthue.component';
+
 import { LienhedangtinComponent } from './Components/Block/lienhedangtin/lienhedangtin.component';
 
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
@@ -67,6 +68,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NgbPaginationModule,
     NgbAlertModule,
     NgxPaginationModule
+
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]

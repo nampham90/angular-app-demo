@@ -30,9 +30,14 @@ import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
+
+
+
+
 const routesConfig:Routes=[
     {path:'khuvuc/:khuvuc',component:CateComponent },
     {path:'bds/chitietbds/:id',component:DetailComponent},
+    {path:'bds/chitietbds/phanloai/:id',component:DetailComponent},
    // {path:'khuvuctimkiem/:khuvuc',component:KhuVucTimKiemComponent},
     {path:'timkiemnangcao',component: TimkiemNangCaoComponent},
     {path:'addbds', component:AddbdsComponent},

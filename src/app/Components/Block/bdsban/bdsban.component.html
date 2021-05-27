@@ -1,3 +1,4 @@
+<hr class="new">
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">BÁN ĐẤT HUẾ</button>
@@ -10,7 +11,7 @@
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <article *ngFor="let dataphanloai1 of dataphanloai1 | paginate: { 
+            <article *ngFor="let i=index;let dataphanloai1 of dataphanloai1 | paginate: { 
                                             itemsPerPage: 3,
                                             currentPage: page1,
                                             totalItems : totalLength1
@@ -20,8 +21,8 @@
                    <div class="card h-100">
                        <img src="https://namphamtrade.com/public/uploads/{{dataphanloai1.image[0]}}" class="card-img-top" alt="...">
                        <div class="card-body">
-                           <h5 class="card-title"><a class="meta-link fs-sm mb-2" routerLink="/bds/chitietbds/{{dataphanloai1.id}}">{{dataphanloai1.khuvuc}}</a></h5>
-                           <h5 class="h5 nav-heading mb-4"><a class="edit" routerLink="/bds/chitietbds/{{dataphanloai1.id}}">{{dataphanloai1.tenbds}}</a></h5>
+                           <h5 class="card-title"><a class="meta-link fs-sm mb-2" (click)='setIdbds(dataphanloai1.id,i)' routerLink="/bds/chitietbds/phanloai/{{dataphanloai1.id}}">{{dataphanloai1.khuvuc}}</a></h5>
+                           <h5 class="h5 nav-heading mb-4"><a class="edit" [class.active]="i == currentIndex" (click)='setIdbds(dataphanloai1.id,i)' routerLink="/bds/chitietbds/phanloai/{{dataphanloai1.id}}">{{dataphanloai1.tenbds}}</a></h5>
                            <p class="meta-link fs-xs">{{dataphanloai1.mota}}</p>
                        </div>
                         <div class="card-footer">
@@ -51,7 +52,7 @@
 
     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <article *ngFor="let dataphanloai2 of dataphanloai2 | paginate: { 
+            <article *ngFor="let i=index;let dataphanloai2 of dataphanloai2 | paginate: { 
                                             itemsPerPage: 3,
                                             currentPage: page2,
                                             totalItems : totalLength2
