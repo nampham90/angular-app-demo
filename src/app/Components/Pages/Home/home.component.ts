@@ -22,7 +22,7 @@ import {BdscService} from '../../../Services/bds.module';
            .subscribe(data=>{
                this.bds=data;
                this.totalLength=data.length;
-               console.log(data);
+               console.log({tong:this.totalLength});
            },
            error=>{
                console.log(error);

@@ -37,7 +37,7 @@ export class TimkiemNangCaoComponent implements OnInit{
                  .subscribe(dulieu=>{
                      this.bdstimkiem=dulieu;
                      this.totalLength=dulieu.length;
-                     console.log(dulieu);
+                     console.log({tong:this.totalLength});
                  },err=>{
                      console.log(err);
                  })
