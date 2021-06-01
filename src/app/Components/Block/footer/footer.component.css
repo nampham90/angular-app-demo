@@ -7,3 +7,29 @@
 .text-white:hover{
     color:yellow !important;
 }
+
+.footer-block-item-head{
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    border-bottom: 1px solid white;
+}
+
+.company{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: yellow;
+    font-weight: bold;
+}
+.footer-company-item{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+.ml-text-14{
+    text-decoration: none;
+    font-size: 0.9em;
+}
+.gachduoi{
+    border-bottom: 1px solid white;
+}
