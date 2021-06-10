@@ -4,6 +4,7 @@ import { BdscService } from '../../../Services/bds.module';
 
 @Component({
     templateUrl: 'timkiem.component.html',
+    styleUrls:['timkiem.component.css'],
     selector: 'timkiemnangcao',
     providers: [BdscService]
 })

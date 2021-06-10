@@ -95,3 +95,23 @@
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: 0.2em !important;
   }
+  .edit{
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+  }
+  .editkhuvuc{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+  }
+  a:hover{
+    color: red;
+  }
+  .editmota{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-size: 0.9em !important;
+  }
+  .meta-link{
+    color: blue !important;
+  }

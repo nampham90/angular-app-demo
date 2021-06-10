@@ -1,16 +1,9 @@
 <div class="col-lg-12 content py-4 mb-2 mb-sm-0 pb-sm-5">
-    <div class="pb-4" style="max-width: 38rem;">
+    <div class="pb-4">
       <nav aria-label="breadcrumb">
-        <ol class="py-1 my-2 breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Blog</a>
-          </li>
-          <li class="breadcrumb-item"><a href="#">Category</a>
-          </li>
-          <li class="breadcrumb-item active" aria-current="page">Single post left sidebar</li>
-        </ol>
+        <h2 *ngIf="currentBds" class="tieude">{{currentBds.tenbds}}</h2>
       </nav>
-      <h1 *ngIf="currentBds">{{currentBds.tenbds}}</h1>
+     
     </div>
 
     <!-- Post author + Sharing-->

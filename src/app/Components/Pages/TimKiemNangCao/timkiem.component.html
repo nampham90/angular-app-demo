@@ -9,7 +9,7 @@
       </ol>
     </nav>
     <div *ngIf='totalLength==0'>
-       <h2>Không Tìm Thấy Kết Quả Nào !</h2>
+       <h2 class="edith2">Không Tìm Thấy Kết Quả Nào !</h2>
     </div>
     <!-- Post-->
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -22,11 +22,11 @@
       </div> -->
       <div class="col">
         <div class="card h-100">
-          <img src="https://namphamtrade.com/public/uploads/{{listbds.image[0]}}" class="card-img-top" alt="...">
+          <img src="https://namphamtrade.com/public/uploads/{{listbds.image[0]}}" width="600" height="300" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title"><a class="meta-link fs-sm mb-2" routerLink="/bds/chitietbds/{{listbds.id}}">{{listbds.khuvuc}}</a></h5>
+            <h5 class="card-title"><a class="meta-link fs-sm mb-2 editkhuvuc" routerLink="/bds/chitietbds/{{listbds.id}}">{{listbds.khuvuc}}</a></h5>
             <h5 class="h5 nav-heading mb-4"><a class="edit" routerLink="/bds/chitietbds/{{listbds.id}}">{{listbds.tenbds}}</a></h5>
-            <p class="meta-link fs-xs">{{listbds.mota}}</p>
+            <p class="fs-xs editmota">{{listbds.mota}}</p>
           </div>
           <div class="card-footer">
             <a class="meta-link fs-xs" href="#"></a><span class="meta-divider"></span><a class="meta-link fs-xs" href="#"><i class="me-1 mt-n1"><mat-icon>paid</mat-icon></i>&nbsp;{{listbds.giabds}}</a>

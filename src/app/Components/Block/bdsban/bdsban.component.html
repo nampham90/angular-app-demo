@@ -19,11 +19,11 @@
                 class="card card-horizontal card-hover mb-grid-gutter">
                 <div class="col">
                    <div class="card h-100">
-                       <img src="https://namphamtrade.com/public/uploads/{{dataphanloai1.image[0]}}" class="card-img-top" alt="...">
+                       <img src="https://namphamtrade.com/public/uploads/{{dataphanloai1.image[0]}}" class="card-img-top" width="600" height="300" alt="...">
                        <div class="card-body">
-                           <h5 class="card-title"><a class="meta-link fs-sm mb-2" (click)='setIdbds(dataphanloai1.id,i)' routerLink="/bds/chitietbds/phanloai/{{dataphanloai1.id}}">{{dataphanloai1.khuvuc}}</a></h5>
+                           <h5 class="card-title"><a class="meta-link fs-sm mb-2 editkhuvuc" (click)='setIdbds(dataphanloai1.id,i)' routerLink="/bds/chitietbds/phanloai/{{dataphanloai1.id}}">{{dataphanloai1.khuvuc}}</a></h5>
                            <h5 class="h5 nav-heading mb-4"><a class="edit" [class.active]="i == currentIndex" (click)='setIdbds(dataphanloai1.id,i)' routerLink="/bds/chitietbds/phanloai/{{dataphanloai1.id}}">{{dataphanloai1.tenbds}}</a></h5>
-                           <p class="meta-link fs-xs">{{dataphanloai1.mota}}</p>
+                           <p class="fs-xs editmota">{{dataphanloai1.mota}}</p>
                        </div>
                         <div class="card-footer">
                             <a class="meta-link fs-xs" href="#"></a><span class="meta-divider"></span><a class="meta-link fs-xs" href="#"><i class="me-1 mt-n1"><mat-icon>paid</mat-icon></i>&nbsp;{{dataphanloai1.giabds}}</a>
@@ -60,11 +60,11 @@
                 class="card card-horizontal card-hover mb-grid-gutter">
                 <div class="col">
                    <div class="card h-100">
-                       <img src="https://namphamtrade.com/public/uploads/{{dataphanloai2.image[0]}}" class="card-img-top" alt="...">
+                       <img src="https://namphamtrade.com/public/uploads/{{dataphanloai2.image[0]}}" class="card-img-top"  width="600" height="300" alt="...">
                        <div class="card-body">
-                           <h5 class="card-title"><a class="meta-link fs-sm mb-2" routerLink="/bds/chitietbds/{{dataphanloai2.id}}">{{dataphanloai2.khuvuc}}</a></h5>
+                           <h5 class="card-title"><a class="meta-link fs-sm mb-2 editkhuvuc" routerLink="/bds/chitietbds/{{dataphanloai2.id}}">{{dataphanloai2.khuvuc}}</a></h5>
                            <h5 class="h5 nav-heading mb-4"><a class="edit" routerLink="/bds/chitietbds/{{dataphanloai2.id}}">{{dataphanloai2.tenbds}}</a></h5>
-                           <p class="meta-link fs-xs">{{dataphanloai2.mota}}</p>
+                           <p class="fs-xs editmota">{{dataphanloai2.mota}}</p>
                        </div>
                         <div class="card-footer">
                             <a class="meta-link fs-xs" href="#"></a><span class="meta-divider"></span><a class="meta-link fs-xs" href="#"><i class="me-1 mt-n1"><mat-icon>paid</mat-icon></i>&nbsp;{{dataphanloai2.giabds}}</a>

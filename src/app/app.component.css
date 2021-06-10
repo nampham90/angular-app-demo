@@ -6,10 +6,11 @@
 }
 .themmau{
     width: 100%;
-    margin-top: 0px;
+    margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 5px;
-    background-color: wheat !important;
+    background-color: chartreuse !important;
+    border-radius: 7px;
 }
 .lienhedangtin{
     width: 100%;
